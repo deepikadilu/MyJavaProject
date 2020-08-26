@@ -60,11 +60,11 @@ public class AmazonBookPage {
 		@Test(priority = 2)
 		public void printTitles() throws InterruptedException, ClassNotFoundException, SQLException {
 
-		    // print the product details
+		    // print the books title details
 		    List<WebElement> products = driver.findElements(By.className("p13n-sc-truncated"));
 		    System.out.println("List size : "+products.size());
 		   // for(WebElement product:products)
-		    
+		    //create and instance of the amazonDB
 		    AmazonListDatabase amazonDB= new AmazonListDatabase(driver);
 		    for(int i=0;i<10;i++){
 		    String BestsellersTitle = products.get(i).getText();

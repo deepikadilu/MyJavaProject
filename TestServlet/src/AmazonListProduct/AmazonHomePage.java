@@ -21,8 +21,10 @@ public class AmazonHomePage {
 		        driver.get("https://www.amazon.in/");
 		        driver.manage().window().maximize();	
 		        
-		        
+		        //Create a new instance of the search page class
 		        AmazonBookPage searchBook = new AmazonBookPage(driver);
+		        
+		     // And now do the search with 2 parameters
 				searchBook.searchForCategory("Books", "Bestsellers");
 				searchBook.printTitles();
 	
